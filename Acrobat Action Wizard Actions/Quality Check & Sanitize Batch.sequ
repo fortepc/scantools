@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://ns.adobe.com/acrobat/workflow/2012" title="Quality Check &amp; Sanitize Batch" description="" majorVersion="1" minorVersion="0">
+	<Group label="Untitled">
+		<Command name="PagesApp" pauseBefore="false"/>
+		<Instruction label="File will be saved in the same location as the original with &quot;TPMScan_&quot; prefix added to the file name, if you don&apos;t want that on the end result file, use a batch renamer to remove the prefix after quality checking the end result." pauseBefore="false"/>
+		<Command name="DIGSIG:SanitizeDocument" pauseBefore="false" promptUser="true"/>
+		<Command name="WorkflowPlaybackSaveFiles" pauseBefore="false" promptUser="false">
+			<Items>
+				<Item name="AddToBaseName" type="boolean" value="true"/>
+				<Item name="DocSaveDestType" type="string" value="WorkflowPlaybackSave"/>
+				<Item name="DontOverwrite" type="boolean" value="true"/>
+				<Item name="EmbedIndex" type="boolean" value="false"/>
+				<Item name="FileVariation" type="integer" value="0"/>
+				<Item name="HandleOutput" type="boolean" value="true"/>
+				<Item name="InsertAfterBaseName" type="text" value=""/>
+				<Item name="InsertBeforeBaseName" type="text" value="TPMScan_"/>
+				<Item name="NumbericNaming" type="boolean" value="false"/>
+				<Item name="OptimizePDF" type="boolean" value="true"/>
+				<Item name="PresetName" type="text" value="Standard"/>
+				<Item name="RunPDFOptimizer" type="boolean" value="false"/>
+			</Items>
+		</Command>
+	</Group>
+</Workflow>
