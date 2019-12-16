@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://ns.adobe.com/acrobat/workflow/2012" title="FullAuto Scan Processing" description="Select a folder and all files in that directory will be optimized as scanned pages and saved as a new PDF" majorVersion="1" minorVersion="0">
+	<Sources defaultCommand="WorkflowPlaybackSelectFolder"/>
+	<Group label="Full Automatic Batch Scan Processing">
+		<Command name="GeneralInfo" pauseBefore="false" promptUser="false">
+			<Items>
+				<Item name="Author" type="null"/>
+				<Item name="Keywords" type="text" value="ScanedbyTPMinc"/>
+				<Items name="LeaveAsIs">
+					<Item name="Author" type="boolean" value="true"/>
+					<Item name="Keywords" type="boolean" value="false"/>
+					<Item name="Subject" type="boolean" value="true"/>
+					<Item name="Title" type="boolean" value="true"/>
+				</Items>
+				<Item name="Subject" type="null"/>
+				<Item name="Title" type="null"/>
+			</Items>
+		</Command>
+		<Command name="Scan:OPT" pauseBefore="false" promptUser="false">
+			<Items>
+				<Item name="ApplyMRC" type="boolean" value="true"/>
+				<Item name="BkgrRemove" type="integer" value="1"/>
+				<Item name="ColorCompression" type="integer" value="4"/>
+				<Item name="Descreen" type="boolean" value="true"/>
+				<Item name="Deskew" type="boolean" value="true"/>
+				<Item name="Format" type="integer" value="1"/>
+				<Item name="Language" type="integer" value="-1"/>
+				<Item name="MonoCompression" type="integer" value="5"/>
+				<Item name="QualityLevel" type="integer" value="3"/>
+				<Item name="TextSharpen" type="integer" value="1"/>
+				<Item name="doOCR" type="boolean" value="true"/>
+			</Items>
+		</Command>
+		<Command name="CreateAllThumbs" pauseBefore="false" promptUser="true"/>
+		<Command name="OpenInfo" pauseBefore="false" promptUser="false">
+			<Items>
+				<Item name="CenterWindow" type="boolean" value="false"/>
+				<Item name="DisplayDocTitle" type="boolean" value="false"/>
+				<Item name="FitWindow" type="boolean" value="false"/>
+				<Item name="FullScreen" type="boolean" value="false"/>
+				<Item name="HideMenubar" type="boolean" value="false"/>
+				<Item name="HideToolbar" type="boolean" value="false"/>
+				<Item name="HideWindowUI" type="boolean" value="false"/>
+				<Items name="LeaveAsIs">
+					<Item name="CenterWindow" type="boolean" value="true"/>
+					<Item name="DisplayDocTitle" type="boolean" value="true"/>
+					<Item name="FitWindow" type="boolean" value="true"/>
+					<Item name="FullScreen" type="boolean" value="true"/>
+					<Item name="HideMenubar" type="boolean" value="true"/>
+					<Item name="HideToolbar" type="boolean" value="true"/>
+					<Item name="HideWindowUI" type="boolean" value="true"/>
+					<Item name="Magnification" type="boolean" value="true"/>
+					<Item name="OpenAction" type="boolean" value="true"/>
+					<Item name="PageMode" type="boolean" value="false"/>
+					<Item name="PageNum" type="boolean" value="true"/>
+				</Items>
+				<Item name="Magnification" type="text" value="100%"/>
+				<Item name="PageLayout" type="integer" value="1"/>
+				<Item name="PageMode" type="integer" value="1"/>
+				<Item name="PageNum" type="text" value="1"/>
+				<Item name="ResetDest" type="boolean" value="false"/>
+			</Items>
+		</Command>
+		<Command name="WorkflowPlaybackSaveFiles" pauseBefore="false" promptUser="false">
+			<Items>
+				<Item name="AddToBaseName" type="boolean" value="true"/>
+				<Item name="DocSaveDestType" type="string" value="WorkflowPlaybackSave"/>
+				<Item name="DontOverwrite" type="boolean" value="true"/>
+				<Item name="EmbedIndex" type="boolean" value="false"/>
+				<Item name="FileVariation" type="integer" value="0"/>
+				<Item name="HandleOutput" type="boolean" value="true"/>
+				<Item name="InsertAfterBaseName" type="text" value=""/>
+				<Item name="InsertBeforeBaseName" type="text" value="AutoProcessed_"/>
+				<Item name="NumbericNaming" type="boolean" value="false"/>
+				<Item name="OptimizePDF" type="boolean" value="true"/>
+				<Item name="PresetName" type="text" value="Standard"/>
+				<Item name="RunPDFOptimizer" type="boolean" value="false"/>
+			</Items>
+		</Command>
+	</Group>
+</Workflow>
