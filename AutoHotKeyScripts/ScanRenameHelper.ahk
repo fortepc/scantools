@@ -1,4 +1,4 @@
-!RControl::
+!RControl:: ; alt+right control triggers the script to tab to the next file name, then click the next photo button in the photo viewer, then reselect the explorer window, then initiate a file rename with F2
 CoordMode, Mouse, Screen
 Send, {Tab}
 Click, 2445, 1005
