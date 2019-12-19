@@ -1,9 +1,9 @@
 !RControl:: ; alt+right control triggers the script to tab to the next file name, then click the next photo button in the photo viewer, then reselect the explorer window, then initiate a file rename with F2
-CoordMode, Mouse, Screen
+CoordMode, Mouse, Screen ; this sets the CoordMode to the screen wide coordinates. 
 Send, {Tab}
 Click, 2445, 1005
 Sleep, 100
-MouseMove, 2735, 820 ; this is where the cursor scrolls into. This should be in a place where the scroll will scroll to the place needed for the document
+MouseMove, 2735, 820 ; this is where the cursor scrolls into. This should be in a placed where the scroll will scroll to the place needed for the document
 Sleep, 100
 MouseClick,WheelUp,,,4,0,D,R ; adjust the first number to change how many times it zooms
 Sleep, 100
