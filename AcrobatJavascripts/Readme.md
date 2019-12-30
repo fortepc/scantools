@@ -1,7 +1,7 @@
 # This page is very new and very much unfinished. Please excuse my mess, I will come back and update this with better instructions, better information, and better grammar and formtting later.
 
 # Adobe Acrobat Javascripts
-In this folder you'll find all my javascript tools that are made to be added to a document. So far I just have the one. You use theses scripts by opening the "JavaScript" tool set, then opening "Document JavaScripts", then type a name for the script you're adding, click "add", them paste in the entire script. 
+In this folder you'll find all my javascript tools that are made to be added to a document. So far I just have the one. You use theses scripts by opening the "JavaScript" tool set, then opening "Document JavaScripts", then type a name for the script you're adding, click "add", them paste in the entire script then click okay, and close the "Document JavaScripts" window. If the script you're using has an output, it will be in the console. So just click on that "console" button on the  "JavaScript" toolset bar
 
 ## PDFScanJobCalc
 
