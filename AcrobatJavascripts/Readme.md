@@ -1,6 +1,6 @@
 
-#Adobe Acrobat Javascripts
+# Adobe Acrobat Javascripts
 
-#PDFScanJobCalc
+# PDFScanJobCalc
 
 Counts page totalls and square footage for scan job billing calculation
