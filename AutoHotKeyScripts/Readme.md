@@ -1,4 +1,4 @@
-# Scan Rename Helper
+# ScanRenameHelper.ahk
 I've updated my Scan Rename Helper script for Auto Hot Key https://github.com/fortepc/scantools/blob/master/AutoHotKeyScripts/ScanRenameHelper.ahk 
 
 As with before, you must have AutoHotKey installed for this script to do anything. That is downloadable here: https://www.autohotkey.com/ to get my script running simply install AutoHotKey if you don't already have it running, download the script here https://github.com/fortepc/scantools/raw/master/AutoHotKeyScripts/ScanRenameHelper.ahk, save it Wherever you want, and just open the "ScanRenameHelper.ahk" file. You'll see a green "H" icon appear in your task bar, and a dialog box open up telling you the script loaded successfully.
