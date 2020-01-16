@@ -1,23 +1,24 @@
 ; Default Variable On Reload Set Section
 
 CoordMode, Mouse, Screen
-ExplorerTitleBarX := 1360 ; X Screen Position of Explorer Title Bar
-ExplorerTitleBary := 16 ; Y Screen Position of Explorer Title Bar
+ExplorerTitleBarX := 1472 ; X Screen Position of Explorer Title Bar
+ExplorerTitleBary := 19 ; Y Screen Position of Explorer Title Bar
 PhotoViewerCloseX := 954 ; X Screen Position Of Photo Viewer Close Button
 PhotoViewerCloseY := 231 ; Y Screen Position  of Photo Viewer Close Button
 ZoomLocationX := 3265 ; X Screen Position of where to zoom into
 ZoomLocationY := 444 ; Y Screen Position of where to zoom into
 ZoomCount := 3 ; How Many Zoom Clicks
-AcrobatTabCloseX := ; 
-AcrobatTabCloseY := ; Y Screen Location
+AcrobatTabCloseX := 330 ; X Screen Location of Acrobat Tab 1 Close button
+AcrobatTabCloseY := 71 ; Y Screen Location of Acrobat Tab 1 Close button
+AcrobatTitleBarX := 520 ; X Screen Location of Acrobat Tab
+AcrobatTitleBarY := 14 ; Y Screen Location of Acrobat Tab
+DeletePrefixCount := 0 ; How many characters to delete from prefix of the FileName
+
+; This MsgBox needs improved, it's not good.
 MsgBox, Script Setup Complete. `n Explorer Title Bar saved as X%ExplorerTitleBarX% Y%ExplorerTitleBarY%. Update this with Alt+NumPad 1 `n Photo Viewer Close Button saved as X%PhotoViewerCloseX% Y%PhotoViewerCloseY% Update this with Alt+NumPad 2. `n Zoom Location set to X%ZoomLocationX% Y%ZoomLocationY% Update this with Alt+NumPad 3. `n Zoom Count set to zoom %ZoomCount% times.
 
-; Variable Set Scripts
-; 
-; See each line for which keyboard shortcuts for each variable
-
 !Numpad1::
-MouseGetPos, ExplorerTitleBarX,ExplorerTitleBary
+MouseGetPos, ExplorerTitleBarX,ExplorerTitleBarY
 MsgBox, Mouse Position saved! Explorer Title Bar Temporarily saved at X%ExplorerTitleBarX% Y%ExplorerTitleBarY%. 
 Return
 
@@ -31,9 +32,24 @@ MouseGetPos, ZoomLocationX,ZoomLocationY
 MsgBox, Mouse Position saved! Zoom Location Temporarily saved at X%ZoomLocationX% Y%ZoomLocationY%.
 Return
 
+!Numpad4::
+MouseGetPos, AcrobatTabCloseX,AcrobatTabCloseY
+MsgBox, Mouse Position saved! Acrobat Tab 1 Close Button. Location Temporarily saved at X%AcrobatTabCloseX% Y%AcrobatTabCloseY%.
+Return
+
+!Numpad5::
+MouseGetPos, AcrobatTitleBarX,AcrobatTitleBarY
+MsgBox, Mouse Position saved! Acrobat Title Bar Location Temporarily saved at X%AcrobatTitleBarX% Y%AcrobatTitleBarY%.
+Return
+
 !Numpad9::
 InputBox, ZoomCount, Zoom Count, How Many Times to zooom `n Zoom Count currently set to zoom %ZoomCount% times. In
 MsgBox, Zoom Count saved! Zoom Count Temporarily set to zoom %ZoomCount% times. 
+Return
+
+!Numpad8::
+InputBox, DeletePrefixCount, Prefix Length, How Many Characters to delete from file name prefix `n Prefix Length currently set to zoom %ZoomCountDeletePrefixCount% times. In
+MsgBox, Prefix Length saved! Next File Rename will now delete the first %DeletePrefixCount% characters. 
 Return
 
 ; TIF rename 
@@ -56,19 +72,19 @@ Send, {F2}
 Return
 
 !LControl::
-CoordMode, Mouse, Screen
 Send, {Tab}
-Click, 1287, 70 ; Location of Acrobat Tab Close
-Sleep, 200
-Click, 388, 19
+Click, %AcrobatTabCloseX%, %AcrobatTabCloseY% ; Location of Acrobat Tab Close
+Click, %ExplorerTitleBarX%,%ExplorerTitleBarY% ; Clicks the Title Bar of Explorer Window to make it the focused window
+Sleep, 100
 Send, {Enter}
 Sleep, 1000
-Click, 388, 19
+Click, %ExplorerTitleBarX%,%ExplorerTitleBarY% ; Clicks the Title Bar of Explorer Window to make it the focused window
+Sleep, 300
 Send, {F2}
 Sleep, 200
 Send, {Home}
 Sleep, 200
-Send, {Del 17}
+Send, {Del %DeletePrefixCount%}
 Return
 
 !/::
