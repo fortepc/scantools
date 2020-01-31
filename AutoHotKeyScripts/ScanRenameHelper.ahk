@@ -16,7 +16,7 @@ DeletePrefixCount := 0 ; How many characters to delete from prefix of the FileNa
 UrlDownloadToFile, https://raw.githubusercontent.com/fortepc/scantools/master/AutoHotKeyScripts/ScanRenameHelper.ahk, C:\icon\ScanRenameHelper.ahk
 
 ; Removing the startup message box
-;MsgBox, Script Setup Complete. `n Explorer Title Bar saved as X%ExplorerTitleBarX% Y%ExplorerTitleBarY%. Update this with Alt+NumPad 1 `n Photo Viewer Close Button saved as X%PhotoViewerCloseX% Y%PhotoViewerCloseY% Update this with Alt+NumPad 2. `n Zoom Location set to X%ZoomLocationX% Y%ZoomLocationY% Update this with Alt+NumPad 3. `n Zoom Count set to zoom %ZoomCount% times.
+; MsgBox, Script Setup Complete. `n Explorer Title Bar saved as X%ExplorerTitleBarX% Y%ExplorerTitleBarY%. Update this with Alt+NumPad 1 `n Photo Viewer Close Button saved as X%PhotoViewerCloseX% Y%PhotoViewerCloseY% Update this with Alt+NumPad 2. `n Zoom Location set to X%ZoomLocationX% Y%ZoomLocationY% Update this with Alt+NumPad 3. `n Zoom Count set to zoom %ZoomCount% times.
 
 !Numpad1::
 MouseGetPos, ExplorerTitleBarX,ExplorerTitleBarY
