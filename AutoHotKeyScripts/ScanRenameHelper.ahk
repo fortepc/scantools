@@ -1,17 +1,17 @@
 ; Default Variable On Reload Set Section
 
 CoordMode, Mouse, Screen
-ExplorerTitleBarX := 1472 ; X Screen Position of Explorer Title Bar
-ExplorerTitleBary := 19 ; Y Screen Position of Explorer Title Bar
-PhotoViewerCloseX := 954 ; X Screen Position Of Photo Viewer Close Button
-PhotoViewerCloseY := 231 ; Y Screen Position  of Photo Viewer Close Button
-ZoomLocationX := 3265 ; X Screen Position of where to zoom into
-ZoomLocationY := 444 ; Y Screen Position of where to zoom into
-ZoomCount := 3 ; How Many Zoom Clicks
-AcrobatTabCloseX := 330 ; X Screen Location of Acrobat Tab 1 Close button
-AcrobatTabCloseY := 71 ; Y Screen Location of Acrobat Tab 1 Close button
-AcrobatTitleBarX := 520 ; X Screen Location of Acrobat Tab
-AcrobatTitleBarY := 14 ; Y Screen Location of Acrobat Tab
+ExplorerTitleBarX := 0 ; X Screen Position of Explorer Title Bar
+ExplorerTitleBary := 0 ; Y Screen Position of Explorer Title Bar
+PhotoViewerCloseX := 0 ; X Screen Position Of Photo Viewer Close Button
+PhotoViewerCloseY := 0 ; Y Screen Position  of Photo Viewer Close Button
+ZoomLocationX := 0 ; X Screen Position of where to zoom into
+ZoomLocationY := 0 ; Y Screen Position of where to zoom into
+ZoomCount := 0 ; How Many Zoom Clicks
+AcrobatTabCloseX := 0 ; X Screen Location of Acrobat Tab 1 Close button
+AcrobatTabCloseY := 0 ; Y Screen Location of Acrobat Tab 1 Close button
+AcrobatTitleBarX := 0 ; X Screen Location of Acrobat Tab
+AcrobatTitleBarY := 0 ; Y Screen Location of Acrobat Tab
 DeletePrefixCount := 0 ; How many characters to delete from prefix of the FileName
 UrlDownloadToFile, https://raw.githubusercontent.com/fortepc/scantools/master/AutoHotKeyScripts/ScanRenameHelper.ahk, C:\icon\ScanRenameHelper.ahk
 
