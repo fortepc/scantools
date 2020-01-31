@@ -73,6 +73,24 @@ Send, {F2}
 Return
 
 !LControl::
+If (%AcrobatTabCloseX% = 0)
+{
+    MsgBox, 0, Setup Needed - Acrobat Tab Location Unknown, This Script needs to know where the button is to close the acrobat tab. Put your cursor over the tab close button in acrobat, then click the spacebar.
+    ToolTip , Put cursor above the tab close button, then press space
+    KeyWait, Space, D
+    MouseGetPos, AcrobatTabCloseX,AcrobatTabCloseY
+    MsgBox, Mouse Position saved! Acrobat Tab Close Button Location saved to X%AcrobatTabCloseX% Y%AcrobatTabCloseY%.
+
+}
+If (%ExplorerTitleBarX% = 0)
+{
+    MsgBox, 0, Setup Needed - Explorer Title Bar Location Unknown, This Script needs to know where the explorer window is to activate the window for this script. Put your cursor over the explorer window's titlebar, then click the spacebar.
+    ToolTip , Put cursor above the tab close button, then press space
+    KeyWait, Space, D
+    MouseGetPos, ExplorerTitleBarX,ExplorerTitleBarY
+    MsgBox, Mouse Position saved! Explorer Window Location saved to X%ExplorerTitleBarX% Y%ExplorerTitleBarY%.
+
+}
 Send, {Tab}
 Click, %AcrobatTabCloseX%, %AcrobatTabCloseY% ; Location of Acrobat Tab Close
 Click, %ExplorerTitleBarX%,%ExplorerTitleBarY% ; Clicks the Title Bar of Explorer Window to make it the focused window
