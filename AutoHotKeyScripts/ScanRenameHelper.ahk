@@ -158,6 +158,8 @@ Return
 
 ; Update Script Shortcut
 !+u::
+MsgBox, 4,, Update and Reload ScanRenameHelper? 
+IfMsgBox, No, Return
 UrlDownloadToFile, https://raw.githubusercontent.com/fortepc/scantools/master/AutoHotKeyScripts/ScanRenameHelper.ahk, C:\icon\ScanRenameHelper.ahk
 Reload
 Sleep 1000 ; If successful, the reload will close this instance during the Sleep, so the line below will never be reached.
