@@ -58,6 +58,24 @@ Return
 ; Click Alt+Right Control to activate this section
 
 !RControl:: 
+If (%PhotoViewerCloseX% = 0)
+{
+    MsgBox, 0, Setup Needed - Photo Viewer Close Button Unknown, This Script needs to know where the button is to close the photo viewer. Put your cursor over the photo viewer close button in acrobat, then click the spacebar.
+    ToolTip , Put cursor above the tab close button, then press space
+    KeyWait, Space, D
+    MouseGetPos, PhotoViewerCloseX,PhotoViewerCloseY
+    MsgBox, Mouse Position saved! Photo Viewer Close Button Location saved to X%PhotoViewerCloseX% Y%PhotoViewerCloseY%.
+    Return
+}
+If (%ExplorerTitleBarX% = 0)
+{
+    MsgBox, 0, Setup Needed - Explorer Title Bar Location Unknown, This Script needs to know where the explorer window is to activate the window for this script. Put your cursor over the explorer window's titlebar, then click the spacebar.
+    ToolTip , Put cursor above the tab close button, then press space
+    KeyWait, Space, D
+    MouseGetPos, ExplorerTitleBarX,ExplorerTitleBarY
+    MsgBox, Mouse Position saved! Explorer Window Location saved to X%ExplorerTitleBarX% Y%ExplorerTitleBarY%.
+    Return
+}
 Send, {Tab} ; Moves highlighted file to the next file
 Click, %PhotoViewerCloseX%,%PhotoViewerCloseY% ; Close button of Photo Viewer
 Sleep, 200 ; How long to wait (in ms) before swichng back to explorer window
