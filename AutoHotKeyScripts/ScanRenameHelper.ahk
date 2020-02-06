@@ -13,7 +13,7 @@ AcrobatTabCloseY := 0 ; Y Screen Location of Acrobat Tab 1 Close button
 AcrobatTitleBarX := 0 ; X Screen Location of Acrobat Tab
 AcrobatTitleBarY := 0 ; Y Screen Location of Acrobat Tab
 DeletePrefixCount := 0 ; How many characters to delete from prefix of the FileName
-UrlDownloadToFile, https://raw.githubusercontent.com/fortepc/scantools/master/AutoHotKeyScripts/ScanRenameHelper.ahk, C:\icon\ScanRenameHelper.ahk
+; UrlDownloadToFile, https://raw.githubusercontent.com/fortepc/scantools/master/AutoHotKeyScripts/ScanRenameHelper.ahk, C:\icon\ScanRenameHelper.ahk
 
 ; Removing the startup message box
 ; MsgBox, Script Setup Complete. `n Explorer Title Bar saved as X%ExplorerTitleBarX% Y%ExplorerTitleBarY%. Update this with Alt+NumPad 1 `n Photo Viewer Close Button saved as X%PhotoViewerCloseX% Y%PhotoViewerCloseY% Update this with Alt+NumPad 2. `n Zoom Location set to X%ZoomLocationX% Y%ZoomLocationY% Update this with Alt+NumPad 3. `n Zoom Count set to zoom %ZoomCount% times.
@@ -158,11 +158,17 @@ Return
 
 ; Update Script Shortcut
 ^!r::
-MsgBox, 4,, Update and Reload ScanRenameHelper? 
-IfMsgBox, No, Return
+MsgBox, 4, , Would you like to continue?, 5  ; 5-second timeout.
+IfMsgBox, No
+    Return  ; User pressed the "No" button.
+IfMsgBox, Timeout
+    Return ; i.e. Assume "No" if it timed out.
+; Otherwise, continue:
+; ...
 UrlDownloadToFile, https://raw.githubusercontent.com/fortepc/scantools/master/AutoHotKeyScripts/ScanRenameHelper.ahk, C:\icon\ScanRenameHelper.ahk
 Reload
 Sleep 1000 ; If successful, the reload will close this instance during the Sleep, so the line below will never be reached.
 MsgBox, 4,, The script could not be reloaded. Would you like to open it for editing?
 IfMsgBox, Yes, Edit
 return
+
