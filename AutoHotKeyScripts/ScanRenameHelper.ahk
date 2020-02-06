@@ -155,3 +155,12 @@ Return
 !+'::
 Send, {U+2033} ; this adds a double prime symbol (″) when you press alt+shift+'. The double prime is commonly used to denote a measurement is in inches. 
 Return
+
+; Update Script Shortcut
+!+u::
+UrlDownloadToFile, https://raw.githubusercontent.com/fortepc/scantools/master/AutoHotKeyScripts/ScanRenameHelper.ahk, C:\icon\ScanRenameHelper.ahk
+Reload
+Sleep 1000 ; If successful, the reload will close this instance during the Sleep, so the line below will never be reached.
+MsgBox, 4,, The script could not be reloaded. Would you like to open it for editing?
+IfMsgBox, Yes, Edit
+return
