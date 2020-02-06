@@ -158,7 +158,7 @@ Return
 
 ; Update Script Shortcut
 ^!r::
-MsgBox, 4, , Would you like to continue?, 5  ; 5-second timeout.
+MsgBox, 4, , Update and Reload ScanRenameHelper.ahk?, 5  ; 5-second timeout.
 IfMsgBox, No
     Return  ; User pressed the "No" button.
 IfMsgBox, Timeout
