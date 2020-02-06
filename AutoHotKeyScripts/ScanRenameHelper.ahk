@@ -97,7 +97,7 @@ If (%AcrobatTabCloseX% = 0)
     ToolTip , Put cursor above the tab close button, then press space
     KeyWait, Space, D
     MouseGetPos, AcrobatTabCloseX,AcrobatTabCloseY
-    Mouse Position saved! Press Alt+Left Control to try again.
+    MsgBox, Mouse Position saved! Press Alt+Left Control to try again.
     Return
 }
 If (%ExplorerTitleBarX% = 0)
