@@ -61,9 +61,10 @@ Return
 If (%PhotoViewerCloseX% = 0)
 {
     MsgBox, 0, Setup Needed - Photo Viewer Close Button Unknown, This Script needs to know where the button is to close the photo viewer. Put your cursor over the photo viewer close button in acrobat, then click the spacebar.
-    ToolTip , Put cursor above the tab close button, then press space
+    ToolTip , Press Space Now
     KeyWait, Space, D
     MouseGetPos, PhotoViewerCloseX,PhotoViewerCloseY
+    ToolTip
     MsgBox, Mouse Position saved! Press Alt+Right Control to try again.
     Return
 }
@@ -73,6 +74,7 @@ If (%ExplorerTitleBarX% = 0)
     ToolTip , Put cursor above the tab close button, then press space
     KeyWait, Space, D
     MouseGetPos, ExplorerTitleBarX,ExplorerTitleBarY
+    ToolTip
     MsgBox, Mouse Position saved! Press Alt+Right Control to try again.
     Return
 }
@@ -97,6 +99,7 @@ If (%AcrobatTabCloseX% = 0)
     ToolTip , Put cursor above the tab close button, then press space
     KeyWait, Space, D
     MouseGetPos, AcrobatTabCloseX,AcrobatTabCloseY
+    ToolTip
     MsgBox, Mouse Position saved! Press Alt+Left Control to try again.
     Return
 }
@@ -106,6 +109,7 @@ If (%ExplorerTitleBarX% = 0)
     ToolTip , Put cursor above the tab close button, then press space
     KeyWait, Space, D
     MouseGetPos, ExplorerTitleBarX,ExplorerTitleBarY
+    ToolTip
     MsgBox, Mouse Position saved! Press Alt+Left Control to try again.
     Return
 }
