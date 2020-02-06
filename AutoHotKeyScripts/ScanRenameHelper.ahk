@@ -64,7 +64,7 @@ If (%PhotoViewerCloseX% = 0)
     ToolTip , Put cursor above the tab close button, then press space
     KeyWait, Space, D
     MouseGetPos, PhotoViewerCloseX,PhotoViewerCloseY
-    MsgBox, Mouse Position saved! Photo Viewer Close Button Location saved to X%PhotoViewerCloseX% Y%PhotoViewerCloseY%.
+    MsgBox, Mouse Position saved! Press Alt+Right Control to try again.
     Return
 }
 If (%ExplorerTitleBarX% = 0)
@@ -73,7 +73,7 @@ If (%ExplorerTitleBarX% = 0)
     ToolTip , Put cursor above the tab close button, then press space
     KeyWait, Space, D
     MouseGetPos, ExplorerTitleBarX,ExplorerTitleBarY
-    MsgBox, Mouse Position saved! Explorer Window Location saved to X%ExplorerTitleBarX% Y%ExplorerTitleBarY%.
+    MsgBox, Mouse Position saved! Press Alt+Right Control to try again.
     Return
 }
 Send, {Tab} ; Moves highlighted file to the next file
@@ -97,8 +97,8 @@ If (%AcrobatTabCloseX% = 0)
     ToolTip , Put cursor above the tab close button, then press space
     KeyWait, Space, D
     MouseGetPos, AcrobatTabCloseX,AcrobatTabCloseY
-    MsgBox, Mouse Position saved! Acrobat Tab Close Button Location saved to X%AcrobatTabCloseX% Y%AcrobatTabCloseY%.
-
+    Mouse Position saved! Press Alt+Left Control to try again.
+    Return
 }
 If (%ExplorerTitleBarX% = 0)
 {
@@ -106,8 +106,8 @@ If (%ExplorerTitleBarX% = 0)
     ToolTip , Put cursor above the tab close button, then press space
     KeyWait, Space, D
     MouseGetPos, ExplorerTitleBarX,ExplorerTitleBarY
-    MsgBox, Mouse Position saved! Explorer Window Location saved to X%ExplorerTitleBarX% Y%ExplorerTitleBarY%.
-
+    MsgBox, Mouse Position saved! Press Alt+Left Control to try again.
+    Return
 }
 Send, {Tab}
 Click, %AcrobatTabCloseX%, %AcrobatTabCloseY% ; Location of Acrobat Tab Close
