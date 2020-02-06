@@ -157,7 +157,7 @@ Send, {U+2033} ; this adds a double prime symbol (″) when you press alt+shift+
 Return
 
 ; Update Script Shortcut
-!+u::
+^!r::
 MsgBox, 4,, Update and Reload ScanRenameHelper? 
 IfMsgBox, No, Return
 UrlDownloadToFile, https://raw.githubusercontent.com/fortepc/scantools/master/AutoHotKeyScripts/ScanRenameHelper.ahk, C:\icon\ScanRenameHelper.ahk
